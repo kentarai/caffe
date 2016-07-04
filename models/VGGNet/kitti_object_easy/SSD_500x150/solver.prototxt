@@ -1,0 +1,25 @@
+train_net: "models/VGGNet/kitti_object_easy/SSD_500x150/train.prototxt"
+test_net: "models/VGGNet/kitti_object_easy/SSD_500x150/test.prototxt"
+test_iter: 3480
+test_interval: 10000
+base_lr: 0.001
+display: 10
+max_iter: 100000
+lr_policy: "step"
+gamma: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+stepsize: 60000
+snapshot: 80000
+snapshot_prefix: "models/VGGNet/kitti_object_easy/SSD_500x150/VGG_kitti_object_easy_SSD_500x150"
+solver_mode: GPU
+device_id: 0
+debug_info: false
+snapshot_after_train: true
+test_initialization: false
+average_loss: 10
+iter_size: 1
+type: "SGD"
+eval_type: "detection"
+ap_version: "11point"
+
